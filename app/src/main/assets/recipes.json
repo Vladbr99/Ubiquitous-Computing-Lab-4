@@ -1,0 +1,54 @@
+
+{
+  "recipes": [
+    {
+      "name": "Pancakes",
+      "ingredients": [
+        "Flour",
+        "Milk",
+        "Eggs"
+      ],
+      "method": "Mix the ingredients and cook in a frying pan."
+    },
+    {
+      "name": "Scrambled Eggs",
+      "ingredients": [
+        "Eggs",
+        "Milk",
+        "Butter",
+        "Salt"
+      ],
+      "method": "Beat the eggs with milk. Melt butter in a pan and cook while stirring."
+    },
+    {
+      "name": "Spaghetti Bolognese",
+      "ingredients": [
+        "Spaghetti",
+        "Minced Beef",
+        "Tomato Sauce",
+        "Onion"
+      ],
+      "method": "Boil the spaghetti. Cook the beef and onion, then add tomato sauce."
+    },
+    {
+      "name": "Chicken Sandwich",
+      "ingredients": [
+        "Bread",
+        "Chicken",
+        "Lettuce",
+        "Mayonnaise"
+      ],
+      "method": "Cook the chicken and place it between bread with lettuce and mayonnaise."
+    },
+    {
+      "name": "Fruit Salad",
+      "ingredients": [
+        "Apple",
+        "Banana",
+        "Orange",
+        "Grapes"
+      ],
+      "method": "Wash and chop the fruit. Mix everything together in a bowl."
+    }
+  ]
+}
