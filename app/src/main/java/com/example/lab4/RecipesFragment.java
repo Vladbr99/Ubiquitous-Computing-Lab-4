@@ -44,11 +44,20 @@ public class RecipesFragment extends Fragment {
 
         recipeListView.setOnItemClickListener((parent, itemView, position, id) -> {
 
-            Intent intent = new Intent(requireContext(), RecipeDetailActivity.class);
-            intent.putExtra("recipePosition", position);
-            startActivity(intent);
+            MainActivity activity = (MainActivity) requireActivity();
 
+            if (activity.findViewById(R.id.detail_container) != null) {
+
+                activity.showRecipeDetails(position);
+
+            } else {
+
+                Intent intent = new Intent(requireContext(), RecipeDetailActivity.class);
+                intent.putExtra("recipePosition", position);
+                startActivity(intent);
+            }
         });
+
 
 
         return view;

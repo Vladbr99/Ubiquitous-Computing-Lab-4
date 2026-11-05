@@ -17,9 +17,36 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         if (savedInstanceState == null) {
+
             getSupportFragmentManager()
                     .beginTransaction()
                     .replace(R.id.fragment_container, new RecipesFragment())
+                    .commit();
+
+
+            if (findViewById(R.id.detail_container) != null) {
+
+                IngredientsFragment detailFragment = new IngredientsFragment();
+                detailFragment.setRecipePosition(0);
+
+                getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.detail_container, detailFragment)
+                        .commit();
+            }
+        }
+    }
+
+    public void showRecipeDetails(int position) {
+
+        if (findViewById(R.id.detail_container) != null) {
+
+            IngredientsFragment detailFragment = new IngredientsFragment();
+            detailFragment.setRecipePosition(position);
+
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.detail_container, detailFragment)
                     .commit();
         }
     }
