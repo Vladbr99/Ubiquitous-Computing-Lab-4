@@ -7,12 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-
 import java.util.ArrayList;
+import android.content.Intent;
 
 public class RecipesFragment extends Fragment {
 
@@ -41,6 +40,16 @@ public class RecipesFragment extends Fragment {
         );
 
         recipeListView.setAdapter(adapter);
+
+
+        recipeListView.setOnItemClickListener((parent, itemView, position, id) -> {
+
+            Intent intent = new Intent(requireContext(), RecipeDetailActivity.class);
+            intent.putExtra("recipePosition", position);
+            startActivity(intent);
+
+        });
+
 
         return view;
     }
